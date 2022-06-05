@@ -25,6 +25,14 @@ main {
     padding: 9px 15px;
 }
 
+#remove-btn {
+    font-size: 10px;
+    background-color: transparent;
+    border: none;
+    color: #D5D4D8;
+    margin-left: 15px;
+}
+
 .title-container {
     display: flex;
     flex-direction: column;
@@ -37,6 +45,7 @@ main {
 .container {
     padding: 35px 35px;
     background-color: #1F2937;
+    font-size: 20px;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -55,6 +64,36 @@ main {
     border-radius: 10px;
 }
 
+.alert {
+    max-width: 500px;
+    z-index: 9999;
+    position: fixed;
+    text-align: center;
+    height: 0px;
+    opacity: 0%;
+    top: 100px;
+    left: 30%;
+    right: 30%;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 1.5s ease-out;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.open {
+    height: 1.2rem;
+    opacity: 100%;
+}
+
 table {
     width: 100%;
 }
@@ -68,6 +107,7 @@ thead {
 
 td {
     width: 50%;
+    padding: 10px;
 }
 
 tr td:nth-of-type(2) {
@@ -76,4 +116,9 @@ tr td:nth-of-type(2) {
 
 button:hover {
     border: 2px solid white;
+}
+
+hr {
+    width: 100%;
+    color: #C3C6DB;
 }

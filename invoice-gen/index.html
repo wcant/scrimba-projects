@@ -15,8 +15,9 @@
         </div>
         <div class="container services">
         </div>
+        <div class="alert alert-danger">Service already added to invoice.</div>
         <div class="container">
-            <table >
+            <table>
                 <thead>
                     <tr>
                         <td>TASK</td>
@@ -27,9 +28,14 @@
 
                 </tbody>
                 <tfoot>
+                    <tr><td colspan="2"><hr></td></tr>
                     <tr>
                         <td>NOTES</td>
                         <td>TOTAL AMOUNT</td>
+                    </tr>
+                    <tr>
+                        <td>We accept cash, credit card, or PayPal</td>
+                        <td id="invoice-total"></td>
                     </tr>
                 </tfoot>
             </table>
