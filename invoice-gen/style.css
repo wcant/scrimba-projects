@@ -20,9 +20,16 @@ main {
     height: 44px;
     border-radius: 10px;
     color: white;
+    font-weight: medium;
+    line-height: 24px;
+    font-size: 16px;
     background-color: #3A69D2;
     border: none;
     padding: 9px 15px;
+}
+
+#send-btn i {
+    margin: 0 10px;
 }
 
 #remove-btn {
@@ -38,12 +45,22 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 190px;
     background-color: #3A69D2;
     color: white;
 }
 
 .container {
-    padding: 35px 35px;
+    padding: 35px 35px 0px 35px;
+    background-color: #1F2937;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.send-container {
+    padding: 35px 35px 50px 35px;
     background-color: #1F2937;
     font-size: 20px;
     color: white;
@@ -53,6 +70,7 @@ main {
 
 .subhead {
     font-size: 16px;
+    line-height: 28px;
 }
 
 .service-btn {
@@ -62,6 +80,28 @@ main {
     background-color: #D1D4F4;
     border: 1px solid #4A4E74;
     border-radius: 10px;
+}
+
+.currency {
+    color: #918E9B;
+    font-weight: light;
+    font-size: 24px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: medium;
+    line-height: 20px;
+}
+
+.note {
+    color: #F5F5F5;
+}
+
+#invoice-total {
+    font-size: 36px;
+    line-height: 32px;
+    color: #F5F5F5;
 }
 
 .alert {
@@ -94,6 +134,12 @@ main {
     opacity: 100%;
 }
 
+h1 {
+    margin: 0px;
+    line-height: 40px;
+    font-size: 40px;
+}
+
 table {
     width: 100%;
 }
@@ -103,6 +149,16 @@ thead {
     line-height: 20px;
     font-weight: bold;
     color: #D5D4D8;
+}
+
+tfoot {
+    font-size: 12px;
+    line-height: 32px;
+    color: #D5D4D8;
+}
+
+tfoot tr td {
+    padding: 0px;
 }
 
 td {

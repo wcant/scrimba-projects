@@ -25,6 +25,7 @@ const invoiceState = {
     rows: {}
 }
 
+// you could easily add services/prices to a database and have the buttons populate
 createServiceButtons();
 
 services.addEventListener('click', handleServicesClick);
@@ -35,7 +36,6 @@ function handleServicesClick(e) {
     // check if service already exists on invoice
     if (invoiceState.services.find(val => val === service)) {
         showAlert('Service already added to invoice.');
-        // alert('Service already added to invoice.');
     } else {
         addService(service);
     }
@@ -60,7 +60,7 @@ function addService(service) {
     removeBtn.addEventListener('click', removeService);
     col1.append(removeBtn);
 
-    col2.innerHTML = `$${price}`;
+    col2.innerHTML = `<span class="currency">$</span><span class="price">${price}</span>`;
 
     row.append(col1,col2);
     tableBody.append(row);
@@ -93,7 +93,7 @@ function createServiceButtons() {
         const button = document.createElement('button');
         button.classList.add('service-btn');
         button.setAttribute('value', service);
-        button.textContent = service + `${availableServices[service]}`;
+        button.textContent = service + `: ${availableServices[service]}`;
         services.append(button);
     }
 }
@@ -107,9 +107,3 @@ function showAlert(message){
     },2000);
     document.body.appendChild(el);
 }
-
-// $(document).ready(function() {
-//     $('#box').click(function() {
-//         $(this).find(".hidden").toggleClass('open');
-//     });
-// });

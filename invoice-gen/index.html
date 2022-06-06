@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoice Creator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1dfb3c5cbc.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <main>
@@ -15,7 +16,8 @@
         </div>
         <div class="container services">
         </div>
-        <div class="alert alert-danger">Service already added to invoice.</div>
+        <div class="alert-container"></div>
+        <!-- <div class="alert alert-danger">Service already added to invoice.</div> -->
         <div class="container">
             <table>
                 <thead>
@@ -34,14 +36,14 @@
                         <td>TOTAL AMOUNT</td>
                     </tr>
                     <tr>
-                        <td>We accept cash, credit card, or PayPal</td>
+                        <td><span class="note">We accept cash, credit card, or PayPal</span></td>
                         <td id="invoice-total"></td>
                     </tr>
                 </tfoot>
             </table>
         </div>
-        <div class="container">
-            <button id="send-btn">Send Invoice</button>
+        <div class="send-container">
+            <button id="send-btn"><i class="fa-solid fa-envelope"></i> Send Invoice</button>
         </div>
     </main>
     <script src="index.js"></script>
