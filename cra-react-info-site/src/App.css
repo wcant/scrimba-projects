@@ -1,0 +1,82 @@
+/* Layout */
+.App {
+  width: 100%;
+  height: 100%;
+}
+
+.nav--logo {
+  height: 3rem;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .nav--logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+nav {
+  background-color: #21222A;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem;
+}
+
+.nav--logo_text {
+  color: #61DAFB;
+  margin-right: auto;
+}
+
+.nav--title {
+  color: #DEEBF8;
+}
+
+main {
+  padding: 2.5rem 2rem;
+}
+
+.main--title {
+  letter-spacing: -0.05em;
+}
+
+.main--facts > li {
+  line-height: 19px;
+  padding-block: 10px;
+}
+
+.main--facts > li::marker {
+  font-size: 1.4rem;
+  color: #61DAFB;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4 {
+  margin: none;
+}
+
+.semi-bold {
+  font-weight: 550;
+}
+
+
+
+

@@ -1,0 +1,187 @@
+html, body {
+    --color-1: #a8e6cf;
+    --color-2: #dcedc1;
+    --color-3: #ffd3b6;
+    --color-4: #ffaaa5;
+    --color-5: #ff8b94;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 50px;
+    background-image: linear-gradient(135deg, var(--color-1) , var(--color-2));
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    color: black;
+    font-size: 16px;
+}
+
+h1 {
+    margin: 0;
+    font-size:3rem;
+}
+
+h2 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+button:focus {
+    outline: none;
+}
+
+/*                   */
+/*       Layout      */
+/*                   */
+
+.container {
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: -2px 6px 18px 3px rgba(0,0,0,0.75);
+    padding: 50px;
+}
+
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.leaderboard table {
+    width: 100%;
+}
+
+/*                   */
+/*      Modal        */
+/*                   */
+
+#overlay {
+    display: none;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+}
+
+#modal {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #dcedc1;
+    width: 700px;
+    min-height: 400px;
+    z-index: 2;
+    border: 10px solid #878787;
+    border-radius: 10px;
+}
+
+.winner-modal {
+    border: 20px solid gold;
+    color: red;
+}
+
+.label-btn {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 1rem 1.75rem;
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: whitesmoke;
+    background-color: steelblue;
+    border: 5px solid #878787;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#playerNumForm input {
+    position: absolute;
+    opacity: 0;
+}
+
+.checked {
+    background-color: whitesmoke;
+    color: #878787;
+    border: 5px solid steelblue;
+}
+
+.btn-red {
+    background-color: var(--color-5);
+}
+
+.btn {
+    box-sizing: border-box;
+    color: #fff;
+    padding: 20px 30px;
+    font-size: 20px;
+    margin: 40px auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.player-count-btn {
+    margin: 20px 20px;
+    background-color: steelblue;
+}
+
+#resetBtn {
+    background-color: var(--color-4);
+}
+
+#modalReplayBtn {
+    background-color: var(--color-4);
+}
+
+/*                   */
+/* Game Board Styles */
+/*                   */
+
+.players {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.dice {
+    border-radius: 20px;
+    width: 112px;
+    height: 112px;
+    margin: 0 auto;
+    font-size: 80px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+#rollBtn {
+    background-color: var(--color-5);
+}
+
+#addPlayerBtn {
+    display: none;
+    background-color: green;
+}
+
+#removePlayerBtn {
+    cursor: pointer;
+}
+
+.active {
+    box-shadow: -2px 6px 18px 3px rgba(0,0,0,0.75);
+}
+
+.visuallyhidden {
+    display: none;
+}

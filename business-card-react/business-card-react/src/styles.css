@@ -1,0 +1,113 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #23252C;
+    font-family: Inter, sans-serif;
+}
+
+.Card {
+    max-width: 317px;
+    margin: 3rem auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.Card > img {
+    display: block;
+    width: 100%;
+}
+
+main {
+    padding: 2.18rem;
+    background: #F5F5F5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card--header {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card--header > h1 {
+    font-size: 1.56rem;
+    color: #2B283A;
+    line-height: 1.89rem;
+}
+
+.card--header > h3 {
+    margin: 0;
+}
+
+.card--job_title {
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #F47D27;
+    line-height: 1rem;
+
+}
+
+.card--porfolio_url {
+    font-size: 0.64rem;
+    line-height: 150%;
+    color: #4A4E74;
+}
+
+.card--email_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 9px 11px 9px 11px;
+    gap: 8px;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    width: 247px;
+}
+
+.card--description > p {
+    color: #4A4E74;
+    font-size: 10.24px;
+}
+
+.card--description > h2 {
+    font-size: 1rem;
+    color: #2B283A;
+}
+
+footer {
+    background: #D5D4D8;
+    border-radius: 0px 0px 10px 10px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer > img {
+    width: 25px;
+    height: 25px;
+    margin: 0 0.75rem;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
