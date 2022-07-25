@@ -5,14 +5,20 @@ function Gallery(gallery) {
 
   this.gallery = gallery;
 
-  this.cards = Array.from(gallery.querySelectorAll(".card"));
+  this.cards = Array.from(this.gallery.querySelectorAll(".card"));
   this.modal = document.querySelector(".modal-outer");
   this.modalInner = this.modal.querySelector(".modal-inner");
   this.prevButton = this.modal.querySelector(".prev");
   this.nextButton = this.modal.querySelector(".next");
-  this.currentCard = {
-    el: null,
-  };
+  this.currentCard = {};
+
+  // the prototype methods need access to the this scoped here in the constructor
+  // and the scope changes when the card click eventListener runs, so bind it here
+  this.handleImageClick = this.handleImageClick.bind(this);
+  this.showPrevImage = this.showPrevImage.bind(this);
+  this.showNextImage = this.showNextImage.bind(this);
+  this.handleModalClick = this.handleModalClick.bind(this);
+  this.handleKeyUp = this.handleKeyUp.bind(this);
 
   this.cards.forEach((card) => {
     card.addEventListener("click", this.handleImageClick);
@@ -24,6 +30,7 @@ Gallery.prototype.handleImageClick = function (e) {
   if (this.cardClicked) {
     this.currentCard.el = this.cardClicked;
     this.currentCard.image = this.cardClicked.querySelector("img").src;
+    console.log(this.currentCard);
     this.currentCard.heading = this.cardClicked.querySelector("h2").textContent;
     this.currentCard.description =
       this.cardClicked.querySelector("p").textContent;
@@ -80,26 +87,26 @@ Gallery.prototype.closeModal = function () {
 };
 
 Gallery.prototype.showNextImage = function () {
-  this.nextCard = this.currentCard.el.nextElementSibling || this.cards[0];
+  const nextCard = this.currentCard.el.nextElementSibling || this.cards[0];
 
   if (nextCard) {
-    this.currentCard.el = this.nextCard;
-    this.currentCard.image = this.nextCard.querySelector("img").src;
-    this.currentCard.heading = this.nextCard.querySelector("h2").textContent;
-    this.currentCard.description = this.nextCard.querySelector("p").textContent;
+    this.currentCard.el = nextCard;
+    this.currentCard.image = nextCard.querySelector("img").src;
+    this.currentCard.heading = nextCard.querySelector("h2").textContent;
+    this.currentCard.description = nextCard.querySelector("p").textContent;
     this.showImage();
   }
 };
 
 Gallery.prototype.showPrevImage = function () {
-  this.prevCard =
+  const prevCard =
     this.currentCard.el.previousElementSibling ||
     this.cards[this.cards.length - 1];
   if (prevCard) {
-    this.currentCard.el = this.prevCard;
-    this.currentCard.image = this.prevCard.querySelector("img").src;
-    this.currentCard.heading = this.prevCard.querySelector("h2").textContent;
-    this.currentCard.description = this.prevCard.querySelector("p").textContent;
+    this.currentCard.el = prevCard;
+    this.currentCard.image = prevCard.querySelector("img").src;
+    this.currentCard.heading = prevCard.querySelector("h2").textContent;
+    this.currentCard.description = prevCard.querySelector("p").textContent;
     this.showImage();
   }
 };
