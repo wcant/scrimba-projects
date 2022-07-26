@@ -1,37 +1,15 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div id="overlay">
-            <div id="modal"></div>
-        </div>
-        <div id="gameBoard" class="container">
-            <h1 id="message"></h1>
-            <div id="playerContainer">
-                <!-- <div id="player1">
-                    <span id="removePlayerBtn">❌</span>
-                    <h2>P1 Score:
-                        <span id="player1Scoreboard">0</span>
-                    </h2>
-                    <div id="player1Dice" class="dice active"></div>
-                </div>
-                <div id="player2">
-                    <span id="removePlayerBtn">❌</span>
-                    <h2>P2 Score:
-                        <span id="player2Scoreboard">0</span>
-                    </h2>
-                    <div id="player2Dice" class="dice"></div>
-                </div> -->
-            </div>
-            <button id="rollBtn" class="btn">Roll Dice 🎲</button>
-            <button id="addPlayerBtn" class="btn">Add Player ➕</button>
-        </div>
-        <div class="container">
-            <div id="leaderboard"></div>
-        </div>
-        <script type="module" src="index.js"></script>
-    </body>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="modal-outer">
+      <div class="modal-inner"></div>
+    </div>
+    <main>
+      <div id="gameBoard" class="visuallyhidden"></div>
+      <div id="leaderboard"></div>
+    </main>
+    <script type="module" src="index.js"></script>
+  </body>
 </html>
-
-
